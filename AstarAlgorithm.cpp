@@ -157,7 +157,7 @@ void AstarAlgorithm::initCloseList()
 	/*size_t sz = g->map->length();
 	closeList.resize(sz);
 	memset(&closeList[0], 0, sz);*/
-	size_t sz = g->map->length() / 8;
+	size_t sz = g->map->length() / 8 + 1;
 	closeList.resize(sz);
 	memset(&closeList[0], 0, sz);
 }

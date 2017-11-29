@@ -193,7 +193,7 @@ public:
 
 		if (pos < sz)
 		{
-			T temp = *iteFirst[pos];
+			_Ty temp = iteFirst[pos];
 
 			while (j < sz)
 			{
@@ -207,6 +207,7 @@ public:
 				pos = j;
 				j = j*2 + 1;
 			}
+			iteFirst[pos] = temp;
 		}
 	}
 /*	{

@@ -46,18 +46,23 @@ int main(int argc, char* argv[])
 
 	AstarAlgorithm astar;
 
-	for (int i=0; i<10000; i++)
+	std::srand(std::time(0));
+
+	for (int i=0; i<1000; i++)
 	{
 		for ( ite = result.begin(); ite != result.end(); ite++ )
 		{
 			delete *ite;
 		}
-
 		result.clear();
 		astar.search(result, &g, &startPos, &endPos);
-	}
 
-	
+		startPos.x = std::rand() % w;
+		startPos.y = std::rand() % h;
+
+		endPos.x = std::rand() % w;
+		endPos.y = std::rand() % h;
+	}
 
 	for ( ite = result.begin(); ite != result.end(); ite++ )
 	{
