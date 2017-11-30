@@ -200,7 +200,7 @@ public:
 				if (j+1 < sz && pred(iteFirst[j+1],iteFirst[j]))
 					j++;
 
-				if (pred(iteFirst[pos],iteFirst[j]))
+				if (pred(temp,iteFirst[j]))
 					break;
 
 				iteFirst[pos] = iteFirst[j];
